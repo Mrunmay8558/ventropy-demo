@@ -1,5 +1,6 @@
-import React from 'react';
-import { motion } from 'framer-motion';
+import React from "react";
+import { motion } from "framer-motion";
+import logo from "../assets/logo.png";
 
 export function Navbar() {
   return (
@@ -13,16 +14,29 @@ export function Navbar() {
             className="flex-shrink-0"
           >
             <div className="flex items-center">
-              <span className="text-2xl font-bold bg-gradient-to-r from-blue-600 to-purple-600 bg-clip-text text-transparent">
-                Cliniq360
-              </span>
+              <img src={logo} className="w-1/2 object-cover" alt="img" />
             </div>
           </motion.div>
-          
+
           <div className="flex items-center space-x-4">
-            <a href="#" className="text-gray-700 hover:text-blue-600 transition-colors">About</a>
-            <a href="#" className="text-gray-700 hover:text-blue-600 transition-colors">Services</a>
-            <a href="#" className="text-gray-700 hover:text-blue-600 transition-colors">Contact</a>
+            <a
+              href="#"
+              className="text-gray-700 hover:text-blue-600 transition-colors"
+            >
+              About
+            </a>
+            <a
+              href="#"
+              className="text-gray-700 hover:text-blue-600 transition-colors"
+            >
+              Services
+            </a>
+            <a
+              href="#"
+              className="text-gray-700 hover:text-blue-600 transition-colors"
+            >
+              Contact
+            </a>
           </div>
         </div>
       </div>
