@@ -1,7 +1,11 @@
-import React, { useRef, useState } from "react";
+import React, { useEffect, useRef, useState } from "react";
 import { motion } from "framer-motion";
 
-export function VideoSection() {
+export function VideoSection({
+  playAnimation,
+}: {
+  playAnimation: boolean;
+}): JSX.Element {
   const videoRef = useRef(null);
   const [isPlaying, setIsPlaying] = useState(false);
 
@@ -19,6 +23,12 @@ export function VideoSection() {
     }
   };
 
+  useEffect(() => {
+    if (playAnimation) {
+      handlePlayVideo();
+    }
+  }, [playAnimation]);
+
   return (
     <motion.div
       initial={{ opacity: 0, scale: 0.95 }}
@@ -35,21 +45,11 @@ export function VideoSection() {
         muted
       >
         <source
-          src="https://res.cloudinary.com/dojc5d0dj/video/upload/v1733996225/aditya_birla_fzpq7e.mp4"
+          src="https://res.cloudinary.com/dojc5d0dj/video/upload/v1734001587/new_jounrey_wjsomu.mp4"
           type="video/mp4"
         />
         Your browser does not support the video tag.
       </video>
-      {!isPlaying && (
-        <div className="absolute inset-0 flex items-center justify-center">
-          <button
-            onClick={handlePlayVideo}
-            className="bg-blue-600 text-white px-6 py-3 rounded-full text-lg shadow-lg hover:bg-blue-700 transition"
-          >
-            Start Journey
-          </button>
-        </div>
-      )}
     </motion.div>
   );
 }

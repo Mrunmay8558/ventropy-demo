@@ -6,6 +6,7 @@ import { VideoSection } from "./components/VideoSection";
 import { motion } from "framer-motion";
 
 function App() {
+  const [playAnimation, setPlayAnimation] = React.useState(false);
   return (
     <div className="min-h-screen bg-gradient-to-br from-gray-50 to-gray-100">
       <Navbar />
@@ -30,9 +31,9 @@ function App() {
             guidance.
           </motion.h4>
 
-          <div className="grid grid-cols-1 lg:grid-cols-2 gap-8 items-center">
-            <AIPersona />
-            <VideoSection />
+          <div className="grid grid-cols-1 lg:grid-cols-2  items-center">
+            <AIPersona setPlayAnimation={setPlayAnimation} />
+            <VideoSection playAnimation={playAnimation} />
           </div>
         </div>
       </main>
