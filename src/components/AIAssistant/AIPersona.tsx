@@ -52,9 +52,6 @@ export function AIPersona({
 
         <div className="mb-8 flex flex-col items-center justify-center">
           <p className="text-gray-700  text-lg text-center">
-            I'm your personal insurance assistant.
-          </p>
-          <p className="text-gray-700 mb-4 text-base text-center">
             I'll help you with your insurance journey.
           </p>
           <DotLottieReact

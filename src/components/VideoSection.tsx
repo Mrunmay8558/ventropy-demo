@@ -34,18 +34,19 @@ export function VideoSection({
       initial={{ opacity: 0, scale: 0.95 }}
       animate={{ opacity: 1, scale: 1 }}
       transition={{ duration: 0.5 }}
-      className="relative overflow-hidden bg-gray-900 w-full h-[100vh]" // Full height of viewport
+      className="relative overflow-hidden w-full h-[100vh]" // Full height of viewport
     >
-      <div className="absolute inset-0 bg-gradient-to-br from-blue-600/20 to-purple-600/20" />
+      <div className="absolute inset-0 " />
       <video
         ref={videoRef}
-        className="absolute inset-0 w-full h-full object-cover"
+        className="absolute inset-0 w-full h-full object-fill "
         loop
         playsInline
         muted
       >
+        {/* insert link here */}
         <source
-          src="https://res.cloudinary.com/dojc5d0dj/video/upload/v1734001587/new_jounrey_wjsomu.mp4"
+          src="https://res.cloudinary.com/dojc5d0dj/video/upload/v1734156321/new_video_qn1uh1.mp4"
           type="video/mp4"
         />
         Your browser does not support the video tag.

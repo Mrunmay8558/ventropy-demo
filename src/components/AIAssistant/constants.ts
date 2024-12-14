@@ -5,7 +5,7 @@ export const AI_CAPABILITIES = [
 ];
 
 export const AI_CONFIG = {
-  name: "Sara",
-  role: "Your Financial Assistant",
+  name: "Surbhi",
+  role: "Your personal Insurance Assistant",
   capabilities: AI_CAPABILITIES,
 } as const;
